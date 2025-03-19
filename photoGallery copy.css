@@ -1,0 +1,167 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #FAF3F0;
+    color: #2E2E2E;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.sidebar {
+    font-family: 'Ubuntu Mono', monospace, serif;
+    font-size: 20px;
+    width: 200px;
+    height: 100vh;
+    background-color: #FFF;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.sidebar h3 {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #2E3192;
+    text-align: center;
+}
+
+.sidebar .bar-item {
+    display: block;
+    padding: 10px;
+    color: #2E2E2E;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.sidebar .bar-item:hover {
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 800px;
+    background: #ffffff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-left: 25%;
+}
+
+.section {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-left: 5px solid #2962ff;
+    background: #e0f2f7;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.name {
+    font-family: 'Ubuntu Mono', monospace;
+    margin-bottom: 0;
+    text-align: center;
+    color: #1a237e;
+}
+
+.sub {
+    font-family: 'Ubuntu Mono', monospace;
+    margin-top: 0;
+    text-align: center;
+    color: #1565c0;
+}
+
+h2 {
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 1.9em;
+    color: #2E3192;
+    text-align: center;
+    margin-bottom: 12px;
+    text-decoration: underline;
+}
+
+.polaroid-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.polaroid {
+    background: #ffffff;
+    padding: 10px;
+    border: 10px solid #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    display: inline-block;
+    margin: 20px;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Fixed size for landscape photos */
+.polaroid.landscape img {
+    width: 300px; /* Fixed width for landscape photos */
+    height: 200px; /* Fixed height for landscape photos */
+    object-fit: cover; /* Ensures the image fits within the fixed size */
+    display: block;
+    margin: 0 auto;
+}
+
+/* Fixed size for portrait photos */
+.polaroid.portrait img {
+    width: 200px; /* Fixed width for portrait photos */
+    height: 300px; /* Fixed height for portrait photos */
+    object-fit: cover; /* Ensures the image fits within the fixed size */
+    display: block;
+    margin: 0 auto;
+}
+
+.polaroid .caption {
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 16px;
+    color: #2E2E2E;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.polaroid:hover {
+    transform: scale(1.05) rotate(-2deg); /* Applies hover effect without affecting layout */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    z-index: 1; /* Ensures the hovered element appears above others */
+}
+
+.to-top {
+    position: fixed;
+    display: inline-flex;
+    bottom: 10px;
+    right: 10px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+}
+
+.to-top img {
+    width: 25px;
+    height: 25px;
+}
+
+.to-top:hover {
+    transform: scale(1.2) rotate(360deg);
+    transition: transform 0.5s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
